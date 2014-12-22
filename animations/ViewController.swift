@@ -10,14 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var numberOfFishSlider: UISlider!
+    @IBOutlet weak var numberOfFishLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    @IBAction func numberOfFishSliderDidChange(sender: AnyObject) {
+        let currentValue = Int(numberOfFishSlider.value)
+        numberOfFishLabel.text = "\(currentValue)"
     }
     
     @IBAction func animateButtonPressed(sender: AnyObject) {
         
         //loop for 10 times
-        for loopNumber in 0...10{
+        let numberOfFish = Int(self.numberOfFishSlider.value)
+        for loopNumber in 1...numberOfFish{
 
             //constants for animation
             let duration: NSTimeInterval = 1.0
@@ -29,10 +37,10 @@ class ViewController: UIViewController {
             let yPosition: CGFloat = CGFloat(CGFloat(rand()) % 600 + 10.0)
             
             //create objects and add it to the screen
-            let coloredSquare = UIView()
-            coloredSquare.backgroundColor = UIColor.blueColor()
-            coloredSquare.frame = CGRectMake(0-size, yPosition, size, size)
-            self.view.addSubview(coloredSquare)
+            let fish = UIImageView()
+            fish.image = UIImage(named: "fish-illustration.png")
+            fish.frame = CGRectMake(0-size, yPosition, size, size)
+            self.view.addSubview(fish)
             
             // How to dynamically measure the width of the device and apply it to the animation?
             // Clues:
@@ -43,12 +51,12 @@ class ViewController: UIViewController {
             
             //defining the animation
             UIView.animateWithDuration(duration, delay: delay, options: options, animations: {
-                coloredSquare.backgroundColor = UIColor.redColor()
+                //coloredSquare.backgroundColor = UIColor.redColor()
                 
                 //replace constants in the frame, ie. size and yPosition
-                coloredSquare.frame = CGRectMake(414, yPosition, size, size)
+                fish.frame = CGRectMake(414, yPosition, size, size)
                 }, completion: { animationFinished in
-                    coloredSquare.removeFromSuperview()
+                    fish.removeFromSuperview()
             })
         }
         
