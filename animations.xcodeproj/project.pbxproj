@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B3AB5B21A4AED09001D3AB3 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AB5B11A4AED09001D3AB3 /* ViewController2.swift */; };
 		0B7D131C1A39CEAE00252301 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7D131B1A39CEAE00252301 /* AppDelegate.swift */; };
 		0B7D131E1A39CEAE00252301 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7D131D1A39CEAE00252301 /* ViewController.swift */; };
 		0B7D13211A39CEAE00252301 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7D131F1A39CEAE00252301 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B3AB5B11A4AED09001D3AB3 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		0B7D13161A39CEAE00252301 /* animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B7D131A1A39CEAE00252301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B7D131B1A39CEAE00252301 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				0B7D131B1A39CEAE00252301 /* AppDelegate.swift */,
 				0B7D131D1A39CEAE00252301 /* ViewController.swift */,
+				0B3AB5B11A4AED09001D3AB3 /* ViewController2.swift */,
 				0B7D131F1A39CEAE00252301 /* Main.storyboard */,
 				0B7D13221A39CEAE00252301 /* Images.xcassets */,
 				0B7D13241A39CEAE00252301 /* LaunchScreen.xib */,
@@ -215,6 +218,7 @@
 			files = (
 				0B7D131E1A39CEAE00252301 /* ViewController.swift in Sources */,
 				0B7D131C1A39CEAE00252301 /* AppDelegate.swift in Sources */,
+				0B3AB5B21A4AED09001D3AB3 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
