@@ -35,22 +35,24 @@ class ViewController2: UIViewController {
     }
     @IBAction func animateButtonTapped(sender: AnyObject) {
         
-        //learning about 'tuple': multiple objects assigned to a single variable. how is it different than an array?
-        let views = (frontView: self.redSquare, backView: self.blueSquare)
+        // creating another 'tuple': multiple objects assigned to one varaible
+        var views: (frontView: UIView, backView: UIView)
+        
+        // if redSquare has a superView (which means it's in the container)
+        // set redSquare as front, and blue as back
+        // otherwise flip the order
+        
+        if((self.redSquare.superview) != nil){
+            views = (frontView: self.redSquare, backView: self.blueSquare)
+        }
+        else{
+            views = (frontView: self.blueSquare, backView: self.redSquare)
+        }
         
         //set a transition style
         let transitionOptions = UIViewAnimationOptions.TransitionCurlUp
         
-        UIView.transitionWithView(self.container, duration: 0.7, options: transitionOptions, animations: {
-            
-            //remove the front object
-            views.frontView.removeFromSuperview()
-            
-            // ...then add the back object
-            self.container.addSubview(views.backView)
-            }, completion: { finished in
-                // tbd
-        })
+        UIView.transitionFromView(views.frontView, toView: views.backView, duration: 0.7, options: transitionOptions, completion: nil)
         
     }
     
