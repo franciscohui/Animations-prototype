@@ -14,6 +14,7 @@
 		0B7D13231A39CEAE00252301 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B7D13221A39CEAE00252301 /* Images.xcassets */; };
 		0B7D13261A39CEAE00252301 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7D13241A39CEAE00252301 /* LaunchScreen.xib */; };
 		0B7D13321A39CEAE00252301 /* animationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7D13311A39CEAE00252301 /* animationsTests.swift */; };
+		0BE3A35B1A5ABF61008BFB88 /* FloatingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3A35A1A5ABF61008BFB88 /* FloatingAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		0B7D132B1A39CEAE00252301 /* animationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = animationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B7D13301A39CEAE00252301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B7D13311A39CEAE00252301 /* animationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationsTests.swift; sourceTree = "<group>"; };
+		0BE3A35A1A5ABF61008BFB88 /* FloatingAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				0B7D131D1A39CEAE00252301 /* ViewController.swift */,
 				0B3AB5B11A4AED09001D3AB3 /* ViewController2.swift */,
 				0B7D131F1A39CEAE00252301 /* Main.storyboard */,
+				0BE3A35A1A5ABF61008BFB88 /* FloatingAnimationController.swift */,
 				0B7D13221A39CEAE00252301 /* Images.xcassets */,
 				0B7D13241A39CEAE00252301 /* LaunchScreen.xib */,
 				0B7D13191A39CEAE00252301 /* Supporting Files */,
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BE3A35B1A5ABF61008BFB88 /* FloatingAnimationController.swift in Sources */,
 				0B7D131E1A39CEAE00252301 /* ViewController.swift in Sources */,
 				0B7D131C1A39CEAE00252301 /* AppDelegate.swift in Sources */,
 				0B3AB5B21A4AED09001D3AB3 /* ViewController2.swift in Sources */,
