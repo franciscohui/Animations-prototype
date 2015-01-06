@@ -122,12 +122,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDk-pq-7Gf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2107" y="432"/>
+            <point key="canvasLocation" x="2113" y="432"/>
         </scene>
         <!--Floating Animation Controller-->
         <scene sceneID="vBr-fe-cZX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oQU-kq-ZBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="4G2-bc-DHf" customClass="FloatingAnimationController" customModule="animations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uHR-CP-Gdf"/>
@@ -167,6 +166,7 @@
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oQU-kq-ZBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2939" y="432"/>
         </scene>

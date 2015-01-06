@@ -9,45 +9,33 @@
 import UIKit
 
 class FloatingAnimationController: UIViewController {
-
-    //create constants outside of the functions
-    let fish2 = UIImageView()
-    let fullRotation = CGFloat(M_PI * 2)
-    let duration = 2.0
-    let delay = 0.0
-    let options = UIViewKeyframeAnimationOptions.CalculationModePaced
-    
+    let square = UIView()
+    let path = UIBezierPath()
+    let anim = CAKeyframeAnimation(keyPath: "position")
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //create and add fish illustration to the screen
-        fish2.image = UIImage(named: "fish-illustration.png")
-        fish2.frame = CGRect(x: 50, y: 50, width: 50, height: 50)
-        self.view.addSubview(fish2)
-
+        //add square to the screen
+        square.frame = CGRect(x: 55, y: 300, width: 20, height: 20)
+        square.backgroundColor = UIColor.redColor()
+        self.view.addSubview(square)
     }
-    //IBAction is a function outside of viewDidLoad
-    //animation is inside the IBAction
-    //if  let fish2 = UIImageView() is inside the viewDidLoad() function, 
-    //    then the animation won't have access to the constant
     @IBAction func animateButtonisPressed(sender: AnyObject) {
-        UIView.animateKeyframesWithDuration(duration, delay: delay, options: options, animations: {
-            
-            UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: 0, animations: {
-                self.fish2.transform = CGAffineTransformMakeRotation(1/3 * self.fullRotation)
-            })
-            UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: 0, animations: {
-                self.fish2.transform = CGAffineTransformMakeRotation(2/3 * self.fullRotation)
-            })
-            UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: 0, animations: {
-                self.fish2.transform = CGAffineTransformMakeRotation(3/3 * self.fullRotation)
-            })
-            
-            }, completion: {finished in
-                
-        })
+        //using a UIBezierPath then building the CGPath out of the UIBezierPath
+        path.moveToPoint(CGPoint(x: 16, y: 239))
+        path.addCurveToPoint(CGPoint(x: 301, y: 239), controlPoint1: CGPoint(x: 136, y: 373), controlPoint2: CGPoint(x: 178, y: 110))
+        
+        //set animation path
+        anim.path = path.CGPath
+        
+        //set parameters for animation
+        //set rotation parallel to point on the curve
+        anim.rotationMode = kCAAnimationRotateAuto
+        anim.repeatCount = Float.infinity
+        anim.duration = 5.0
+        
+        //add animation to the squares 'layer' property; ?
+        square.layer.addAnimation(anim, forKey: "animate position along path")
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
