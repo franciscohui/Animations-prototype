@@ -9,20 +9,23 @@
 import UIKit
 
 class FloatingAnimationController: UIViewController {
-    let square = UIView()
-    let path = UIBezierPath()
-    let anim = CAKeyframeAnimation(keyPath: "position")
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func animateButtonisPressed(sender: AnyObject) {
+        //using a UIBezierPath then building the CGPath out of the UIBezierPath
+        let square = UIView()
+        let path = UIBezierPath()
+        let anim = CAKeyframeAnimation(keyPath: "position")
+        
         //add square to the screen
         square.frame = CGRect(x: 55, y: 300, width: 20, height: 20)
         square.backgroundColor = UIColor.redColor()
         self.view.addSubview(square)
-    }
-    @IBAction func animateButtonisPressed(sender: AnyObject) {
-        //using a UIBezierPath then building the CGPath out of the UIBezierPath
+        
         path.moveToPoint(CGPoint(x: 16, y: 239))
-        path.addCurveToPoint(CGPoint(x: 301, y: 239), controlPoint1: CGPoint(x: 136, y: 373), controlPoint2: CGPoint(x: 178, y: 110))
+        path.addCurveToPoint(CGPoint(x: 394, y: 239), controlPoint1: CGPoint(x: 136, y: 373), controlPoint2: CGPoint(x: 178, y: 110))
         
         //set animation path
         anim.path = path.CGPath
