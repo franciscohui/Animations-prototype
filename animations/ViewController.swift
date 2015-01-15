@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             
             //constants for object size and positions
             let size : CGFloat = CGFloat( CGFloat(rand()) %  40 + 20.0)
-            let yPosition: CGFloat = CGFloat(CGFloat(rand()) % 600 + 10.0)
+            let yPosition: CGFloat = CGFloat(CGFloat(rand()) % (self.view.frame.size.height - 100) + 10.0)
             
             //create objects and add it to the screen
             let fish = UIImageView()
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
                 //coloredSquare.backgroundColor = UIColor.redColor()
                 
                 //replace constants in the frame, ie. size and yPosition
-                fish.frame = CGRectMake(414, yPosition, size, size)
+                fish.frame = CGRectMake(self.view.frame.size.width, yPosition, size, size)
                 }, completion: { animationFinished in
                     fish.removeFromSuperview()
             })
